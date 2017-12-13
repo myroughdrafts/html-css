@@ -1,0 +1,181 @@
+CSS Coding Standards And Anatomy Of Internal, External & Inline CSS 
+
+CSS Coding Standards
+
+I prefer CSS coding standards from wordpress.org (though you can write CSS in any way you want, only browsers should understand). So here is the list of coding standard I made (and add) from https://make.wordpress.org/core/handbook/best-practices/coding-standards/css/.
+
+
+PART-1
+
+-> Naming selectors: use lowercase, separate words with hyphen (-); not with underscore (_) or camelcase (eg., commentForm).
+
+-> Each selector should be in its own line, ending in either a comma or an opening curly brace. There should be no space b/w selector and comma; but there there should  be a space b/w selector and opening curly brace.
+
+-> Attribute selectors should use double quotes around values (eg., input[type="text"]).
+
+-> Use Tab/s (not space/s) to indent each property. I prefer single Tab.
+
+-> Each property / value pair should be in its own line; and ending with a semicolon (;). Property should be followed by a colon > a space > value > semicolon. Property / value should be lowercase, except for font names and vendor-specific properties.
+
+-> Value 1/3: space before value, after a colon. And should end in semicolon. Define font weights in numerical values (e.g., 400, 700; instead of normal, bold). Use double quotes rather than single quotes. Use a leading zero for decimal values. Don't add a space between value and unit, for example "margin: 20px" is correct, and "margin: 20 px" is incorrect.
+
+-> Value 2/3: don't pad parentheses with spaces.
+
+-> Value 3/3: multiple comma-separated values for one property should be separated by a space (after the comma).
+
+-> Use unit-less line height: see here why? http://meyerweb.com/eric/thoughts/2006/02/08/unitless-line-heights/.
+
+-> Colors: use hex code, or rgba() if opacity is needed. Use shorten values (#fff) when possible, instead of #FFFFFF. Avoid RGB format and uppercase.
+
+-> The closing curly brace, should be flush left, with same level of selectors' indentation.
+
+-> Line blanks: one line blank b/w blocks (in a section); two lines blank b/w sections.
+
+-> Ordering: random ordering is chaos, not poetry. I prefer alphabetically ordering. Also consider the following order (for longer CSS), that I've seen in many Wordpress.org themes:
+/**
+ * Table of Contents
+ *
+ * 1.0 - Normalize
+ * 2.0 - Genericons
+ * 3.0 - Typography
+ * 4.0 - Elements
+ * 5.0 - Forms
+ * 6.0 - Navigation
+ *   6.1 - Links
+ *   6.2 - Menus
+ * 7.0 - Accessibility
+ * 8.0 - Alignments
+ * 9.0 - Clearings
+ * 10.0 - Widgets
+ * 11.0 - Content
+ *    11.1 - Header
+ *    11.2 - Posts and pages
+ *    11.3 - Post Formats
+ *    11.4 - Comments
+ *    11.5 - Sidebar
+ *    11.6 - Footer
+ * 12.0 - Media
+ *    12.1 - Captions
+ *    12.2 - Galleries
+ * 13.0 - Multisite
+ * 14.0 - Media Queries
+ *    14.1 - >= 710px
+ *    14.2 - >= 783px
+ *    14.3 - >= 910px
+ *    14.4 - >= 985px
+ *    14.5 - >= 1200px
+ * 15.0 - Print
+ */
+
+PART-2
+
+Grouping selectors & CSS Shorthand
+
+Grouping selectors example:
+
+selector1,
+selector2,
+Selector3 {
+	...
+}
+
+CSS shorthand examples for (1)font, (2)background, (3)margin, (4)border, (5)padding and (6)list.
+
+Note: use single space (not a comma) between each property. Use "a comma and single space" to separate fonts from each other.
+
+(1)font: font-size must be followed by font-family and a semicolon; other properties should come before font-size without any order. Example:
+
+p {
+	font: bold italic small-caps 1.5em Georgia, Times, Serif;
+}
+
+(2)background: sequence is like that, background-image, background-position, background-repeat, background-attachment, background-color. See example below:
+
+body {
+    background: url(child.jpg) right top no-repeat fixed #ddd;
+}
+
+(3)margin: sequence in margin, TRBL (Trouble), that is Top - Right - Bottom - Left.
+
+Rule that I read from The Definitive Guide by Eric A. Meyer was like in my words:
+
+(#) If there is a single value, take it as the value of Top [added from my side].
+(#) If value of Right is missing, take the value of Top.
+(#) If value of Bottom is missing, take the value of Top.
+(#) If value of Left is missing, take the value of Right.
+
+Example 1: margin 50px for Top, Right, Bottom and Left.
+
+.div-two {
+        margin: 50px ;
+}  
+
+Example 2: margin 125px for Top and Bottom; margin 100px for Right and Left.
+
+.div-two {
+       margin: 125px 100px;
+}     
+
+Example 3: margin 100px Top, margin 200px Bottom, margin 100px Right and Left.
+
+.div-two {
+        margin: 100px 100px 200px;
+}       
+
+
+(4)border: order in properties doesn't matter, you can write in any way you want, but don't forget using semicolon at the end.
+
+.div-two {
+        border: #fff 4px solid;
+}  
+
+(5)padding: sequence in padding works like margin, so I'm leaving it.
+
+(6)list: sequence in shorthand of list is, list-style-type, list-style-image, and, list-style-position
+
+ul {
+	list-style: disc url(arrow-circle-right.svg) inside;
+}  
+
+
+
+
+Anatomy of internal & external CSS
+
+Remember few things and you will remember CSS anatomy even in your dreams: selector, curly-bracket-start, property, colon, a space, value, semicolon, curly-bracket-end. That't it.
+
+Example:
+
+body {
+	background-color: #ddd;
+}
+ 
+
+Anatomy of internal and external CSS is the same, only there is a matter of placing CSS. With internal we place CSS with in <head> </head>, and between <style> </style> element. And with external we place CSS outside in a file with .css extension (e.g., style.css) and between <head> </head> provide the link of that file, see example 2.
+
+
+Example 1:
+
+<head>
+<style>
+body {
+	background-color: #ddd;
+}
+</style>
+</head>
+
+
+Example 2:
+
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+
+Anatomy of inline CSS
+
+In inline CSS, we don't use curly braces, but use double quotes instead. And it is written like the following example, anywhere between <body> </body> element.
+
+<body>
+<p style="color:#00B746;"> Hello !</p>
+</body>
