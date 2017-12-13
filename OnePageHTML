@@ -1,0 +1,418 @@
+One Page HTML
+
+I tried to write HTML in a single page, I hope it will help in understanding HTML quickly.
+
+==============================
+
+<!doctype> element: it stands for document type. It should be declared at the very beginning of HTML source code.
+Example:
+<!doctype html>
+
+==============================
+
+HTML is case-insensitive language, you could write <!DOCTYPE HTML> as well, but it is always good to stick with one writing style.
+
+==============================
+
+Root element <html>: after <!doctype> declaration is made, the root element starts; and everything comes in between opening and closing of root element.
+Example:
+<!doctpe html>
+<html>
+... 
+</html>
+
+==============================
+
+Attribute "lang": "lang" stands for language, it is declared in root element.
+Example:
+<!doctype html>
+<html lang="en">
+...
+</html>
+
+==============================
+
+<head> element: after root element, <head> element starts; and between opening and closing of head element many things such as metadata, title, link, stylesheet, and javascript come.
+Example:
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Learning about Head element </title>
+<meta name="keywords" content=" some keywords">
+<link rel="canonical" href="url type you prefer">
+<link href="style.css" rel="stylesheet">
+<style>
+body {background-color:#ddd;}
+</style>
+<script src="script.js"></script>
+</head>
+<body>
+...
+</body>
+</html>
+
+==============================
+
+<body> element: after closing of </head> element, <body> element starts. And betwen <body></body> element comes 99% HTML: paragraph, image, audio, video, table, form, map and so forth.
+
+==============================
+
+Slash in HTML: "/" forward slash is used.
+
+==============================
+
+Comment in HTML: a web-browser doesn't display HTML comments if they are wrapped in between <!-- and -->. It can be used for single as well as multiple lines.
+Example 1:
+<!-- This is html comment -->
+Example 2:
+<!-- This
+is
+also
+html comment -->
+
+==============================
+
+<main> element: it doesn't come inside <article>, <header>, <aside>, <footer> and so forth; but all can come inside it.
+
+==============================
+
+<aritcle> element: like an article in newspaper which contains <header>, images, <aside>, <footer> etc.,
+example:
+<article>
+<header> <h1> Two women </h1></header>
+<h3> First woman </h3>
+<img src=" " alt=" ">
+<p> Story about first woman [...] </p>
+<h3> Second woman </h3>
+<img src="" alt=" ">
+<p> Story about second woman [...] </p>
+<footer>
+<h1> Few words </h1>
+<p> blah blah blah [...] </footer>
+</article> 
+
+==============================
+
+<header> element: don't get it confused with <head></head>. It shouldn't contain long content, but it should contain thing like heading, search box, menu, ads. Check above example.
+
+==============================
+
+<section> element: it generally works as a child of <article></article>, <header></header>, <aside></aside> and <footer></footer>; it purpose is to put a "section (division) in a content.
+Example:
+<footer>
+<section>
+<h4> Social </h4>
+<p> Social links [...]</p>
+</section>
+<section>
+<nav>>
+<h4> Menu </h4> 
+<p> Internal links [...]</p>
+</nav>
+</section>
+</footer>
+
+==============================
+
+<nav> element: internal navigation of a site, you may put it in <header></header>, <aside></aside>, or <footer> </footer>. Or wherever you want.
+Example:
+<header>
+<nav> 
+<h4>Menu </h4>
+<ul>
+<li> <a href="home.html"> Home </a> </li>
+<li> <a href="about.html"> About </a></li>
+</ul>
+</nav>
+</header>
+
+==============================
+
+<hgroup> element: it is used for grouping headings (h1,h2,h3,h4,h5,h6). I only use it when I put more than one heading together. When between two headings come bigger piece of content, then I don't use <hgroup></hgroup>
+Example:
+<header>
+<hgroup>
+<h1> Marketing Blog </h1>
+<h5> I help people learn marketing </h5>
+</hgroup>
+</header>
+
+==============================
+
+<figure>, <figcaption> elements: this combination of elements help in giving "a caption" to an image.
+Example:
+<figure>
+<img src=" " alt=" ">
+<figcaption>A simpl image</figcaption>
+</figure>
+
+==============================
+
+<aside> element: this element may work in plenty of ways, like, pull-quote or sidebar; to give links or ads within content.
+Example:
+<html>
+<head>
+<title> </title>
+<style>
+article {max-width:300px;}
+aside {float:right; max-width:200px;}
+</style>
+</head>
+<body>
+<article>
+<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. </p>
+<aside> <h1> Green dot movemment </h1></aside>
+<p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+</article
+</body>
+</html>
+
+==============================
+
+<p> element: this element stands for paragraph, whatever paragrah you type, each paragraph comes in between <p></p>. That's so simple.
+
+==============================
+
+<ins>, <del>, <datetime> and <cite> elements: <ins> stands for insertion, <del> stands for deletion, and <cite> stands for reference. And <datetime> is easy to understand, its format is: YYYY-MM-DDTHH:MM-HH:MM (the last HH:MM is to set time zone).
+Example:
+<p> My name is <del>Tond</del><ins datetime="2050-12-31T23:11-5:00" cite="http://example.com/original.html"> Bond, James Bond.</ins></p>
+
+==============================
+
+<dfn>, <abbr>, <kbd>, <var> and <samp> elements: <dfn> stands for defining instace of a term, and <abbr> stands for abbreviaton and uses title=" " attribte for fullform. <kbd> element is used for keyboard keys, example 2; <var> is used for variable, example 3; and <samp> is used for computer generated sample output, example 4.
+Example 1:
+<p> Do it <dfn><abbr title="As Soon As Possible">ASAP</abbr></dfn>, otherwise don't do it. </p>
+Example 2:
+<p>Press <kbd>F12</kbd> to view in browser</p>
+Example 3:
+<p> There is <var>n</var> apples in the basket</p>
+Example 4:
+<p><samp> An error has occured, click to send report!</samp></p>
+
+==============================
+
+<mark>, <sup>, <sub>, <cite>, <q>, <code>, <time>, <a>, <em>, <strong>, <s>, <small>, <i>, <b>, <u> elements.
+Check 'em all:
+<mark> is used to highlight the text.
+Example:
+<p>There is an <mark>elephant</mark></p>
+<sup> element stands for superscript.
+Example:
+<p>X<sup>2</sup>y <sup>2</sup></p>
+<sub> element is for subscript.
+Example:
+<p>X<sub>1</sub>Y <sub>1</sub></p>
+<cite> element is used for reference.
+Example:
+<p>My favourite movie <cite>The Godfather</cite> was directed by Francis Ford Coppola.</p>
+<q> elements inserts double quotes.
+Example:
+<p>The man said <q>Women are beautiful</q>. I agreed with him.</p>
+<code> element is used for codes, when we display code we wrap them in <code></code>.
+Example:
+<p><code>activate_default()</code>never worked</p>
+<time> element: understanding below would be helpful.
+date format = YYYY-MM-DD
+time format = HH:MM-HH:MM
+attribute = datetime (machine readable value)
+<time> element with date.
+Example:
+<time datetime="2023-10-12" pubdate> October 12, 2023</time>
+<time> element with date & time.
+<time datetime="2023-10-12T13:59-04:00" pubdate> October 12, 2023 1:59pm</time> 
+Here flag "pubdate" is optional, stands for publication date.
+<a> element is used for linking the text, and clicked it leads us to the linked address.
+Example:
+<a href=http://example.com> This is a demo website </a>
+Element <em> stands for emphasis, and element <strong> is used to give strong importance.
+Example:
+<p><em>Red beak birds</em> are rare these days.</p>
+<p><strong>Err!</strong> Your codes crashed</p>
+Element <s> stands for strikethrough, it displays exactly like <del> element, but <s> stands for irrelevant or inaccurate text, not for deletion.
+Example:
+<p><s>Rat</s> Elephant is a big animal</p>
+Element <small> is a small font-size than average, it is used in attribution, disclaimer, copyright, license or to fulfil any legal/ethical requirement.
+<p> Bill $140, <small>Taxes Excluded</small> </p>
+Elements <i>, <b>, <u> are used for italicize, bold and underline respectively.
+Example:
+<p>There was a <i>beautiful</i><u> woman</u>, named <b>xyz</b></p>
+
+==============================
+
+<hr> element stands for "horizontal rule", its a horizontal line. I think there should be "vertical rule" for vertical line, there is no such. Pls check example for <hr> element.
+Example:
+<p> Line 1 </p>
+<hr>
+<p> Line 2 <p>
+<hr>
+
+==============================
+
+<pre> elements stands for pre-formatted text, it removes formating from the text; it is very useful in displaying codes, where all the alighnment and space are required.
+Example:
+<pre>
+<p>There is a big space between this and that.</p>
+</pre>
+
+==============================
+
+<blockquote> element: this element is mostly used in blogging for multiple purpose, like text from another source, to gain attention. In blogging, the later one is used blatantly decorated and well alighned with CSS.
+Example:
+<blockquote>
+Your text goes here.
+</blockquote>
+
+==============================
+
+<ol>, <ul>, and <dl> elements: <ol> stands for ordered list; <ul> stands for unordered list; and <dl> stands for description list. Let's see how they work:
+Example for <ol>:
+<ol>
+<li> America </li>
+<li> England </li>
+</ol>
+Example for <ul>:
+<ul>
+<li> America </li>
+<li> England </li>
+</ul>
+In above example <li> is a child of <ol> and <ul>, and it means "list."
+Example for <dl>:
+<dl>
+<dt> Milk Brands:v</dt>
+<dd> Amul</dd>
+<dd> Mother Dairy</dd>
+</dl>
+Here <dt>/<dd> works as name/value.
+
+==============================
+
+<div> element: this is most loved and most used block element. You can put any number of <div> inside <div>; but try to use <header>, <article>, <aside>, <section>, <footer> elements where-ever they are needed. Don't use <div> element so ruthlessly.
+Example:
+<div> anything in between </div>
+
+==============================
+
+<span> element: it is inline element, mostly used for inline style or css class.
+Example of inline style:
+<p>This is <span style="color:orange">orange color.</span></p>
+Example of using using CLASS:
+<p>This is <span class="orange">orange color.</span></p>
+==============================
+
+<details> and <summary> elements: this combo is mostly used in writing FAQs, when you click on a question, and an answer comes out.
+Example:
+<details>
+<summary> How does a baby born?</summary>
+<p> Answer: It takes lots of hard work.</p>
+</details>
+In above example use attribute "open" if you don't want to hide your answer,like <details open>.
+
+==============================
+
+<address> element: this element has contact information, whether virtual or of a physical place.
+Example:
+<address>
+Contact at:
+Twitter, Facebook, 
+or at->
+Box 9454543, Mars
+Universe
+</address>
+
+==============================
+
+<footer> element: it comes at the last (down) location of a webpage, contains information regarding copyright and attribution. It could be used for menu (<nav></nav>) and contact information (<address></address>)
+Example:
+<footer>
+© Copyright 2009-2018, All Rights Reserved
+</footer>
+
+==============================
+
+Embedded elements: <img>, img map, <iframe>, <embed>, <object>, <param>, <video>, <audio>, <source>, <track>, <media>, <mathml>, <svg>. Let's take each one of them by an example and explanation.
+Example of <img> element:
+<img src=" " alt=" " height=" " width =" ">
+Example of img map elements:
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Moscow_July_2011-16.jpg/220px-Moscow_July_2011-16.jpg" width="200" height="200" alt="Planets" usemap="#wow">
+<map name="wow">
+<area shape="rect" coords="0,0,50,50" href="http://example.com/">
+<area shape="rect" coords="50,0,200,200" href="http://example.org/">
+</map>
+Combo of img and map elements is used to link different part of an image. Pls note that hash (#) is used in <img> element and not in <map> element. Attributes "usemap" and "name" both help in linking <img> element to <map> element.
+Example of <Iframe> element:
+it embeds other webpage into your webpage.
+<iframe src="http://example.com" height="600px" width="600px"></iframe>
+Example of <embed> element:
+Preferably used for embedding flash.
+<embed src="somefile.swf">
+Example of <object> element:
+It works something like <iframe> / <embed>
+<object data=" " type= " ">
+Example of <param> element:
+<param> stands of parameter.
+<object data="xyzfile.wav">
+<param name="autoplay" value="false">
+<param name="controller" value="true">
+</object>
+Example of <video> element:
+This element is used for embedding video on a webpage.
+<video src="thisfile.mp4" controls width=" " height=" "></video>
+Example of <audio> element:
+<audio src="somefile.mp3" controls></audio>
+Example 1 of <source> element for audio
+<audio controls>
+<source src="somefile.mp3" type="audio/mp3">
+<source src="somefile.ogg" type="audio/ogg">
+</audio>
+Example 2 of <source> element for video
+<video controls width="500px" height="400px">
+<source src="thisfile.mp4" type="video/mp4">
+<source src="thisfile.ogv" type="video/ogg">
+</video>
+Note: <source> element is used for fallback purpose for <audio> and <video>, when one format doesn't run, it opts for alternate given format.
+Example of <track> element:
+Skipped. But you can read it at https://www.html5rocks.com/en/tutorials/track/basics/.
+Example of <media> elements:
+Above <audio>, <video>, <source> and <track> elements come under media elements.
+Example of MathML element:
+MathML is a Mathematical Markup Language. Skipped. But you can read it at https://www.w3.org/TR/MathML2/chapter2.html.
+Example of SVG element:
+SVG (Scalable Vector Graphics). Skipped. But you can read it at https://www.ibm.com/developerworks/library/wa-scalable/index.html.
+
+==============================
+
+<a>, <link>, and <area> elements:
+Example of <a> element:
+<a href="www.example.com"> some text </a>
+Example of <link> element:
+<link> element is used between <head></head> of a webpage, for example, to link a stylesheet.
+<link rel = "stylesheet" href = "style.css">
+Example of <area> element:
+It is used for linking different part of an image, see above "img map" element.
+
+==============================
+
+<table> element: main child elements of <table> are <caption>, <tr>, and <td>; <tr> stands for row (horizontal), and <td> stands for column.
+Example:
+<table border="1">
+<caption> my table & chair </caption>
+<tr><td> first chair </td><td> second chair </td></tr>
+<table>
+
+==============================
+
+<form> element: here I used <fieldset> and <legend> for decorating a form. <label> help selecting input-field, when you click on the "Name"; attribute "autofocus" helps input-field to get selected just by itself; attribute "placeholder" suggests a text hint to a user; attribute "required" displays a hint that input-field must be filed, and a user can't go ahead without filling it. Attribute "disabled" disable a form. Or you can use "disabled" attribute in the submit button: <input type="submit" disabled>.
+Example:
+<form>
+<fieldset>
+<legend>Fill in the form</legend>
+<p> <label>Name: <input type="text" autofocus placeholder="Pls write your name" required disabled></label></p>
+<p> <input type="submit"></p>
+</fieldset>
+</form>
+
+==============================
+
+THE END.
