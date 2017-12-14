@@ -1,0 +1,35 @@
+After understanding coding standard of CSS from wordpress.org, I looked for coding standard for HTML and found below two useful links:
+
+https://make.wordpress.org/core/handbook/best-practices/coding-standards/html/
+http://developer.fellowshipone.com/patterns/code.php
+I'm making HTML coding standard from the above links in my own terms. They may be exactly the same, or with some changes that I like. Here we go:
+
+Indentation
+
+Like CSS coding standard, use tab/s not spaces. Opening and Closing block should have same indentation; whatever falls in between should indent to the right.
+
+Case
+
+Use lowercase for elements, tags and attributes.
+
+Quotes for security (with strictness of XHTML)
+
+I read, "failing to quote attributes can lead to security vulnerabilities," so better not to compromise with security. Use quotes for a value. I prefer double quotes.
+
+Example:
+<input type="text" name="email" disabled="disabled" />
+
+Self closing elements (prefer strictness of XHTML)
+
+
+
+Self closing elements should close with forward slash and exactly a space preceding it.
+
+Incorrect: <br>
+Correct: <br />
+
+Self closing elements are used a lot between <head> </head>, for example "meta" elements. Pick up a theme from wordpress.org and check its head element in source code, you may find all the self closing elements closed with "exactly a space and a forward slash."
+
+Validate !
+
+https://validator.w3.org/ and find more validators at https://codex.wordpress.org/Validating_a_Website#HTML_-_Validation.
